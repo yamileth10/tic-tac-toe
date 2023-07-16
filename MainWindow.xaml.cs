@@ -25,9 +25,26 @@ namespace TicTacToe
             {Player.O, new BitmapImage(new Uri("pack://application:,,,/Assets/O15.png")) }
         };
 
+        private readonly Image[,] imageControls = new Image[3, 3];
+        private readonly GameResult gameState = new GameResult();
+
         public MainWindow()
         {
             InitializeComponent();
+            SetupGameGrid();
+        }
+
+        private void SetupGameGrid()
+        {
+            for (int r = 0; r < 3; r++)
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    Image imageControl = new Image();
+                    GameGrid.Children.Add(imageControl);
+                    imageControls[r, c] = imageControl;
+                }
+            }
         }
 
         private void GameGrid_Mouse(Object sender, MouseButtonEventArgs e)
