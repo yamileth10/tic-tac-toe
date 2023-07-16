@@ -47,6 +47,21 @@ namespace TicTacToe
             }
         }
 
+        private void OnMoveMade(int r, int c)
+        {
+
+        }
+
+        private  void OnGameEnded(GameResult gameResult)
+        {
+
+        }
+
+        private void OnGameRestarted()
+        {
+
+        }
+
         private void GameGrid_Mouse(Object sender, MouseButtonEventArgs e)
         {
 
