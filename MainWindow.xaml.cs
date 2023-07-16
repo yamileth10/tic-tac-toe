@@ -66,9 +66,13 @@ namespace TicTacToe
 
         }
 
-        private void GameGrid_Mouse(Object sender, MouseButtonEventArgs e)
+        private void GameGrid_MouseDowwn(Object sender, MouseButtonEventArgs e)
         {
-
+            double squareSize = GameGrid.Width / 3;
+            Point clickPosition = e.GetPosition(GameGrid);
+            int row = (int)(clickPosition.Y / squareSize);
+            int col = (int)(clickPosition.X / squareSize);
+            gameState.MakeMove(row, col);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
