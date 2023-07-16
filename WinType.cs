@@ -2,6 +2,6 @@
 {
     public enum WinType
     {
-        Row, Column, MainDiagomal, AntiDiagonal
+        Row, Column, MainDiagonal, AntiDiagonal
     }
 }
